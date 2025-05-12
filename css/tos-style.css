@@ -1,0 +1,22 @@
+
+
+/* on surcharger le css natif du navigateur en utilisant :root  */
+/* on peut utiliser en CSS des variables, elle sont généralement (mais pas que) déclarées dans le :root et utilisées dans tout le CSS */
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    --border-test : 1px dashed black;
+    --default-font-size: 1.2rem; /* 16 x 1.2 = 19.4px */
+    font-size: var(--default-font-size);
+}
+
+/* On va déclarer des comportements CSS pour TOUS LES ÉLÉMENTS de la page */
+*{
+    box-sizing: border-box;
+    border: var(--border-test);
+}
+
+/* On règle le cas de la marge extérieure du body */
+body{
+    margin: 0;
+}
+
