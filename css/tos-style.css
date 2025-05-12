@@ -16,6 +16,11 @@ ATTENTION ! Si vous importer des fichiers CSS dans un fichier CSS, cela doit êt
     --default-font-size: 1.2rem; /* 16 x 1.2 = 19.4px */
     font-size: var(--default-font-size);
     --heading-font-family: 'UniversalSerif';
+    --header-title-color: white;
+    --header-bg-color: #333333;
+    --main-nav-bg-color: var(--header-bg-color);
+    --footer-bg-color: var(--header-bg-color);
+    --main-site-color: #333333;
 }
 
 /* On va déclarer des comportements CSS pour TOUS LES ÉLÉMENTS de la page */
@@ -29,6 +34,10 @@ h1, h2, h3, h4{
     letter-spacing: 0.1rem;
 }
 
+h1{
+    color: var(--header-title-color);
+}
+
 /* ----------- déclaration de classes CSS particulières ----------- */
 
 
@@ -37,5 +46,18 @@ h1, h2, h3, h4{
 /* On règle le cas de la marge extérieure du body */
 body{
     margin: 0;
+    color: var(--main-site-color);
 }
 
+body > header,
+body > nav,
+body > footer{
+    background-color: var(--header-bg-color);
+    color: var(--header-title-color);
+}
+
+body > header a,
+body > nav a,
+body > footer a{
+    color: var(--header-title-color);
+}
