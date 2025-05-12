@@ -12,7 +12,7 @@ ATTENTION ! Si vous importer des fichiers CSS dans un fichier CSS, cela doit êt
 /* Utiliser un :root, des variables, etc sert un adage du CSS : D.R.Y. = Don't Repeat Yourself */
 :root{
     font-family: Arial, Helvetica, sans-serif;
-    --border-test : 1px solid black;
+    --border-test : 0px solid black;
     --default-font-size: 1.2rem; /* 16 x 1.2 = 19.4px */
     font-size: var(--default-font-size);
     --heading-font-family: 'UniversalSerif';
@@ -21,6 +21,7 @@ ATTENTION ! Si vous importer des fichiers CSS dans un fichier CSS, cela doit êt
     --main-nav-bg-color: var(--header-bg-color);
     --footer-bg-color: var(--header-bg-color);
     --main-site-color: #333333;
+    --main-site-bg-color: #F2F0D8;
 }
 
 /* On va déclarer des comportements CSS pour TOUS LES ÉLÉMENTS de la page */
@@ -40,13 +41,45 @@ h1{
 
 /* ----------- déclaration de classes CSS particulières ----------- */
 
+.video{
+    width: 100%;
+    position: relative;
+}
 
+.video > *{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.video-21-9{
+    padding-bottom: 42.85%;    
+}
+
+.video-16-9{
+    padding-bottom: 56.25%;    
+}
+
+.video-4-3{
+    padding-bottom: 75%;    
+}
+
+.video-1-1{
+    padding-bottom: 100%;    
+}
+
+figure.video{
+    margin: 0;
+}
 
 /* ----------- Déclaration CSS selon la strcuture HTML de la page ----------- */
 /* On règle le cas de la marge extérieure du body */
 body{
     margin: 0;
     color: var(--main-site-color);
+    background-color: var(--main-site-bg-color);
 }
 
 body > header,
