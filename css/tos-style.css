@@ -36,6 +36,7 @@ ATTENTION ! Si vous importer des fichiers CSS dans un fichier CSS, cela doit êt
 h1, h2, h3, h4{
     font-family: var(--heading-font-family);
     letter-spacing: 0.1rem;
+    margin-top: 0;
 }
 
 h1{
@@ -45,6 +46,24 @@ h1{
     padding-bottom: calc( 2 * var(--gutter));
     line-height: var(--h1-font-size);
     font-size: var(--h1-font-size);
+}
+
+figure{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #3333333f;
+}
+
+figcaption{
+    font-style: italic;
+    width: 100%;
+    padding: var(--gutter);
+}
+
+img{
+    max-width: 100%;
 }
 
 /* ----------- déclaration de classes CSS particulières ----------- */
@@ -121,6 +140,12 @@ body > nav ul{
 body > nav li:not(body > nav li:last-child){
     border-bottom: 1px solid var(--header-title-color);
 }
+
+main > section > *:not(main > section#hero > *){
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+}
+
 /* Les media queries permettent d'indique des comportement différents du css de base en surchargeant le css selon des facteur d'affichage */
 /* quand la largeur d'affichage atteint ou dépasse 576px mais reste inférieur au point de rupture suivant : 768 */
 @media screen and (min-width: 576px){
@@ -168,6 +193,18 @@ body > nav li:not(body > nav li:last-child){
     body > footer > *{
         width: 960px;
     }
+
+    /* Gérer la mise en colonne des articles dans les section mais pas la section hero */
+    main > section:not(main > section#hero){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main > section > *:not(main > section#hero > *){
+        width: calc( 50% - 2 * var(--gutter));
+    }
+
 }
 
 /* quand la largeur d'affichage atteint ou dépasse 1200px mais reste inférieur au point de rupture suivant : 1400 */
@@ -187,6 +224,10 @@ body > nav li:not(body > nav li:last-child){
     body > nav > *,
     body > footer > *{
         width: 1320px;
+    }
+
+    main > section > *:not(main > section#hero > *){
+        width: calc( 33.33% - 2 * var(--gutter));
     }
 }
 
