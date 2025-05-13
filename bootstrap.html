@@ -304,6 +304,201 @@
                     </div>
                 </article>
             </div>
+            <div>
+                <h2>Les tableaux</h2>
+                <p>
+                    Le reboot css de bootstrap corrige les problème d'affichage "moches" des tableaux (par rapport au css intégré des navigateurs)
+                </p>
+                <table class="table caption-top">
+                    <caption>Tableau bootstrap</caption>
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Prénom</th>
+                            <th>Nom</th>
+                            <th>Login</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Nicolas</td>
+                            <td>Duflot</td>
+                            <td>nduflot</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Mickey</td>
+                            <td>Mulot</td>
+                            <td>mmulot</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Darren</td>
+                            <td>Arronowski</td>
+                            <td>darronowski</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>N°</th>
+                            <th>Prénom</th>
+                            <th>Nom</th>
+                            <th>Login</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>
+                    Il est possible de changer les couleurs, l'apparence, et d'ajouter des bordures aux tableaux, en utilisant d'autres classes bootstrap.
+                </p>
+                <p>
+                    Au niveau des couleurs, on utilise encore les mots clef de couleur bootstrap :
+                </p>
+                <ul>
+                    <li>primary : bleu</li>
+                    <li>secondary : gris</li>
+                    <li>success : vert</li>
+                    <li>warning : orange</li>
+                    <li>danger : rouge</li>
+                    <li>dark : noir</li>
+                </ul>
+                <p>
+                    Il est possible d'agir soit sur le tableau en entier, soit sur une ligne, voir une cellule.
+                </p>
+                <table class="table caption-top">
+                    <caption>
+                        Différentes classes sur les différentes parties du tableau
+                    </caption>
+                    <tr class="table-warning">
+                        <th>La ligne est en warning</th>
+                        <td>
+                            Comme la <code>tr</code> est en warning, la <code>th</code> et la <code>td</code> héritent du style css
+                        </td>
+                        <td class="table-primary">
+                            Comme cette <code>td</code> a la classe "table-primary", le style bleu des tableaux surcharge le style normalement hérité de la <code>tr</code>
+                        </td>
+                        <td>
+                            Cette <code>td</code> hérite du style parent, pas de la <code>td</code> précédente (élément frère / soeur ou "sibling")
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    Il est possible d'appliquer une couleur de fond un peu différente une ligne sur deux, avec la classe "table-striped"
+                </p>
+                <table class="table table-dark table-striped caption-top">
+                    <caption>
+                        Classe table-dark et table-striped
+                    </caption>
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                </table>
+                <p>
+                    Exemple avec "table-primary" et "table-striped"
+                </p>
+                <table class="table table-primary table-striped caption-top">
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td rowspan="2">une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td colspan="2">une cellule</td>
+                    </tr>
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                </table>
+                <p>
+                    L'alternance de couleur peux aussi se faire sur les colonnes
+                </p>
+                <table class="table table-primary table-striped-columns caption-top">
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td colspan="2">une cellule qui fait deux colonnes de large</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                    <tr>
+                        <th>Entête de colonne</th>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                        <td>une cellule</td>
+                    </tr>
+                </table>
+                <p>
+                    Parfois, seulement des bordures suffisent, meci à la classe "table-bordered". Les bordure auront la couleur déterminée par les classe de couleurs si elles sont utilisées
+                </p>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Entête</th>
+                        <td>Cellule</td>
+                    </tr>
+                    <tr class="border-primary">
+                        <th>Entête</th>
+                        <td>Cellule</td>
+                    </tr>
+                    <tr class="border-dark">
+                        <th>Entête</th>
+                        <td>Cellule</td>
+                    </tr>
+                </table>
+            </div>
         </section>
     </main>
     <footer>
