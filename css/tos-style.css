@@ -15,6 +15,8 @@ ATTENTION ! Si vous importer des fichiers CSS dans un fichier CSS, cela doit êt
     --border-test : 0px solid black;
     --default-font-size: 1.2rem; /* 16 x 1.2 = 19.4px */
     font-size: var(--default-font-size);
+    --main-line-height: 1.7rem;
+    line-height: var(--main-line-height);
     --heading-font-family: 'UniversalSerif';
     --header-title-color: white;
     --header-bg-color: #333333;
@@ -22,12 +24,13 @@ ATTENTION ! Si vous importer des fichiers CSS dans un fichier CSS, cela doit êt
     --footer-bg-color: var(--header-bg-color);
     --main-site-color: #333333;
     --main-site-bg-color: #F2F0D8;
+    --gutter: 0.5rem;
+    --h1-font-size: calc(2 * var(--default-font-size));
 }
 
 /* On va déclarer des comportements CSS pour TOUS LES ÉLÉMENTS de la page */
 *{
     box-sizing: border-box;
-    border: var(--border-test);
 }
 
 h1, h2, h3, h4{
@@ -37,6 +40,11 @@ h1, h2, h3, h4{
 
 h1{
     color: var(--header-title-color);
+    margin: 0;
+    padding-top: calc( 2 * var(--gutter));
+    padding-bottom: calc( 2 * var(--gutter));
+    line-height: var(--h1-font-size);
+    font-size: var(--h1-font-size);
 }
 
 /* ----------- déclaration de classes CSS particulières ----------- */
@@ -87,10 +95,47 @@ body > nav,
 body > footer{
     background-color: var(--header-bg-color);
     color: var(--header-title-color);
+    padding: var(--gutter);
 }
 
 body > header a,
 body > nav a,
 body > footer a{
     color: var(--header-title-color);
+    display: block;
+    text-decoration: none;
+}
+
+section article{
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+body > nav ul{
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+body > nav li:not(body > nav li:last-child){
+    border-bottom: 1px solid var(--header-title-color);
+}
+/* Les media queries permettent d'indique des comportement différents du css de base en surchargeant le css selon des facteur d'affichage */
+
+
+
+/* exemple quand on essaie d'imprimer la page, il est possible de ne pas afficher les élément qui ne servent pas lors d'une impression, comme la navigation, les iframe, etc. */
+@media print{
+    :root{
+        --header-bg-color: black;
+        --main-site-color: black;
+        --main-site-bg-color: #fff;
+    }
+
+    body > nav,
+    iframe, .video{
+        display: none;
+        height: 0;
+        padding: 0;
+    }
 }
