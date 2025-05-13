@@ -112,7 +112,8 @@ section article{
 }
 
 body > nav ul{
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     list-style-type: none;
     padding: 0;
 }
@@ -121,7 +122,83 @@ body > nav li:not(body > nav li:last-child){
     border-bottom: 1px solid var(--header-title-color);
 }
 /* Les media queries permettent d'indique des comportement différents du css de base en surchargeant le css selon des facteur d'affichage */
+/* quand la largeur d'affichage atteint ou dépasse 576px mais reste inférieur au point de rupture suivant : 768 */
+@media screen and (min-width: 576px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
+/* quand la largeur d'affichage atteint ou dépasse 768px mais reste inférieur au point de rupture suivant : 992 */
+@media screen and (min-width: 768px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 720px;
+    }
+
+    body > nav ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > nav ul a{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    body > nav li:not(body > nav li:last-child){
+        border-bottom: unset;
+    }
+
+
+}
+
+/* quand la largeur d'affichage atteint ou dépasse 992px mais reste inférieur au point de rupture suivant : 1200 */
+@media screen and (min-width: 992px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 960px;
+    }
+}
+
+/* quand la largeur d'affichage atteint ou dépasse 1200px mais reste inférieur au point de rupture suivant : 1400 */
+@media screen and (min-width: 1200px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 1140px;
+    }
+}
+
+/* quand la largeur d'affichage atteint ou dépasse 1400px mais reste inférieur au point de rupture suivant : 1600 */
+@media screen and (min-width: 1400px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 1320px;
+    }
+}
+
+/* quand la largeur d'affichage atteint ou dépasse 1600px */
+@media screen and (min-width: 1600px){
+    body > main,
+    body > header > *,
+    body > nav > *,
+    body > footer > *{
+        width: 1560px;
+    }
+}
 
 
 /* exemple quand on essaie d'imprimer la page, il est possible de ne pas afficher les élément qui ne servent pas lors d'une impression, comme la navigation, les iframe, etc. */
