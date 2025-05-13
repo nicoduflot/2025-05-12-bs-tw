@@ -499,6 +499,70 @@
                     </tr>
                 </table>
             </div>
+            <div>
+                <h2>Les formulaires</h2>
+                <p>
+                    Les formulaires comportent toute une liste de classes qui permettent de mettre facilement en forme
+                    les champs de saisie.<br />
+                    De plus, Bootstrap permet de customiser les contrôles de formulaires, et cela automatiquement grâce
+                    au JS, et à l'utilisation des classes adéquates.
+                </p>
+                <form class="row">
+                    <div class="col-sm-6">
+                        <label class="form-label" for="choixSelect">Sélecteur</label>
+                        <select class="form-select mb-1" id="choixSelect" name="choixSelect" aria-describedby="info-choixSelect">
+                            <option value="0">Aucun choix</option>
+                            <option value="1">Choix 1</option>
+                            <option value="2">Choix 2</option>
+                        </select>
+                        <div id="info-choixSelect" class="alert alert-primary">
+                            <small>Indiquez un choix, ce champ n'est pas obligatoire</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="email" name="email" id="email" aria-describedby="info-email" />
+                        <label for="email">Email</label>
+                        <div><small>Vous devez indiquer votre email, ce champ est obligatoire</small></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="situation" aria-describedby="info-situation">Votre situation</label><br />
+                        <input type="radio" name="situation" id="pp" value="Physique" checked /> <label for="pp">Particulier</label><br />
+                        <input type="radio" name="situation" id="pm" value="Morale" /> <label for="pm">Entreprise</label>
+                        <div id="info-situation">
+                            <small>Indiquez si vous remplissez ce formulaire en tant que particulier ou pour le compte d'une entreprise</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div>
+                            <input type="checkbox" name="opt01" id="opt01" />
+                            <label for="opt01">Ajouter option 1</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="opt02" id="opt02" />
+                            <label for="opt02">Ajouter option 2</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" aria-describedby="info-prenom" />
+                        <div id="info-prenom">
+                            <small>Veuillez indiquer votre prénom, champ non obligatoire</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" aria-describedby="info-nom" />
+                        <div id="info-nom">
+                            <small>Veuillez indiquer votre Nom de famille d'usage, champ obligatoire</small>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-outline-success btn-sm" type="submit">Envoyer</button>
+                        <button class="btn btn-outline-warning btn-sm" type="reset">Effacer</button>
+                        <button class="btn btn-outline-secondary btn-sm" type="button">Bouton</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
