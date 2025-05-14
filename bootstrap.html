@@ -508,7 +508,7 @@
                     au JS, et à l'utilisation des classes adéquates.
                 </p>
                 <form class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-lg-4 offset-lg-2">
                         <label class="form-label" for="choixSelect">Sélecteur</label>
                         <select class="form-select mb-1" id="choixSelect" name="choixSelect" aria-describedby="info-choixSelect">
                             <option value="0">Aucun choix</option>
@@ -519,44 +519,48 @@
                             <small>Indiquez un choix, ce champ n'est pas obligatoire</small>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <input type="email" name="email" id="email" aria-describedby="info-email" />
-                        <label for="email">Email</label>
-                        <div><small>Vous devez indiquer votre email, ce champ est obligatoire</small></div>
+                    <div class="col-sm-6 col-lg-4 ">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control mb-1" type="email" name="email" id="email" aria-describedby="info-email" />
+                        <div class="alert alert-primary" id="info-email"><small>Vous devez indiquer votre email, ce champ est obligatoire</small></div>
                     </div>
-                    <div class="col-sm-6">
-                        <label for="situation" aria-describedby="info-situation">Votre situation</label><br />
-                        <input type="radio" name="situation" id="pp" value="Physique" checked /> <label for="pp">Particulier</label><br />
-                        <input type="radio" name="situation" id="pm" value="Morale" /> <label for="pm">Entreprise</label>
-                        <div id="info-situation">
+                    <div class="col-sm-6 col-lg-4 offset-lg-2">
+                        <label class="form-label" for="situation" aria-describedby="info-situation">Votre situation</label><br />
+                        <input class="form-check-input" type="radio" name="situation" id="pp" value="Physique" checked /> <label class="form-label" for="pp">Particulier</label><br />
+                        <input class="form-check-input" type="radio" name="situation" id="pm" value="Morale" /> <label class="form-label" for="pm">Entreprise</label>
+                        <div id="info-situation" class="alert alert-primary mt-1">
                             <small>Indiquez si vous remplissez ce formulaire en tant que particulier ou pour le compte d'une entreprise</small>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-lg-4 ">
+                        <label class="form-label">Choisir une option</label>
                         <div>
-                            <input type="checkbox" name="opt01" id="opt01" />
-                            <label for="opt01">Ajouter option 1</label>
+                            <input class="form-check-input" type="checkbox" name="opt01" id="opt01" />
+                            <label class="form-label" for="opt01">Ajouter option 1</label>
                         </div>
                         <div>
-                            <input type="checkbox" name="opt02" id="opt02" />
-                            <label for="opt02">Ajouter option 2</label>
+                            <input class="form-check-input" type="checkbox" name="opt02" id="opt02" />
+                            <label class="form-label" for="opt02">Ajouter option 2</label>
+                        </div>
+                        <div class="alert alert-primary" id="info-option">
+                            <small>Vous pouvez choisir une ou plusieurs option, champ non obligatoire</small>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <label for="prenom">Prénom</label>
-                        <input type="text" id="prenom" name="prenom" aria-describedby="info-prenom" />
-                        <div id="info-prenom">
+                    <div class="col-sm-6 col-lg-4  offset-lg-2">
+                        <label class="form-label" for="prenom">Prénom</label>
+                        <input class="form-control mb-1" type="text" id="prenom" name="prenom" aria-describedby="info-prenom" />
+                        <div class="alert alert-primary" id="info-prenom">
                             <small>Veuillez indiquer votre prénom, champ non obligatoire</small>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <label for="nom">Nom</label>
-                        <input type="text" id="nom" name="nom" aria-describedby="info-nom" />
-                        <div id="info-nom">
+                    <div class="col-sm-6 col-lg-4 ">
+                        <label class="form-label" for="nom">Nom</label>
+                        <input class="form-control mb-1" type="text" id="nom" name="nom" aria-describedby="info-nom" />
+                        <div class="alert alert-primary" id="info-nom">
                             <small>Veuillez indiquer votre Nom de famille d'usage, champ obligatoire</small>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 text-center">
                         <button class="btn btn-outline-success btn-sm" type="submit">Envoyer</button>
                         <button class="btn btn-outline-warning btn-sm" type="reset">Effacer</button>
                         <button class="btn btn-outline-secondary btn-sm" type="button">Bouton</button>
