@@ -22,7 +22,7 @@
     </nav>
     <main class="container">
         <section class="row">
-            <div>
+            <div class="col-lg-6">
                 <article>
                     <h2>Reboot CSS</h2>
                     <p>
@@ -108,7 +108,7 @@
                     </figure>
                 </article>
             </div>
-            <div>
+            <div class="col-lg-6">
                 <article>
                     <h2>Les grilles Responsive Bootstrap</h2>
                     <p>
@@ -304,7 +304,7 @@
                     </div>
                 </article>
             </div>
-            <div>
+            <div class="col-lg-6">
                 <h2>Les tableaux</h2>
                 <p>
                     Le reboot css de bootstrap corrige les problème d'affichage "moches" des tableaux (par rapport au css intégré des navigateurs)
@@ -499,7 +499,7 @@
                     </tr>
                 </table>
             </div>
-            <div>
+            <div class="col-lg-6">
                 <h2>Les formulaires</h2>
                 <p>
                     Les formulaires comportent toute une liste de classes qui permettent de mettre facilement en forme
@@ -507,8 +507,8 @@
                     De plus, Bootstrap permet de customiser les contrôles de formulaires, et cela automatiquement grâce
                     au JS, et à l'utilisation des classes adéquates.
                 </p>
-                <form class="row">
-                    <div class="col-sm-6 col-lg-4 offset-lg-2">
+                <form class="row needs-validation" novalidate>
+                    <div class="col-sm-6 col-xxl-4 offset-xxl-2">
                         <label class="form-label" for="choixSelect">Sélecteur</label>
                         <select class="form-select mb-1" id="choixSelect" name="choixSelect" aria-describedby="info-choixSelect">
                             <option value="0">Aucun choix</option>
@@ -519,12 +519,12 @@
                             <small>Indiquez un choix, ce champ n'est pas obligatoire</small>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 ">
+                    <div class="col-sm-6 col-xxl-4 ">
                         <label class="form-label" for="email">Email</label>
-                        <input class="form-control mb-1" type="email" name="email" id="email" aria-describedby="info-email" />
+                        <input class="form-control mb-1" type="email" name="email" id="email" aria-describedby="info-email" required />
                         <div class="alert alert-primary" id="info-email"><small>Vous devez indiquer votre email, ce champ est obligatoire</small></div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 offset-lg-2">
+                    <div class="col-sm-6 col-xxl-4 offset-xxl-2">
                         <label class="form-label" for="situation" aria-describedby="info-situation">Votre situation</label><br />
                         <input class="form-check-input" type="radio" name="situation" id="pp" value="Physique" checked /> <label class="form-label" for="pp">Particulier</label><br />
                         <input class="form-check-input" type="radio" name="situation" id="pm" value="Morale" /> <label class="form-label" for="pm">Entreprise</label>
@@ -532,7 +532,7 @@
                             <small>Indiquez si vous remplissez ce formulaire en tant que particulier ou pour le compte d'une entreprise</small>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 ">
+                    <div class="col-sm-6 col-xxl-4 ">
                         <label class="form-label">Choisir une option</label>
                         <div>
                             <input class="form-check-input" type="checkbox" name="opt01" id="opt01" />
@@ -546,16 +546,16 @@
                             <small>Vous pouvez choisir une ou plusieurs option, champ non obligatoire</small>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4  offset-lg-2">
+                    <div class="col-sm-6 col-xxl-4 offset-xxl-2">
                         <label class="form-label" for="prenom">Prénom</label>
                         <input class="form-control mb-1" type="text" id="prenom" name="prenom" aria-describedby="info-prenom" />
                         <div class="alert alert-primary" id="info-prenom">
                             <small>Veuillez indiquer votre prénom, champ non obligatoire</small>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 ">
+                    <div class="col-sm-6 col-xxl-4 ">
                         <label class="form-label" for="nom">Nom</label>
-                        <input class="form-control mb-1" type="text" id="nom" name="nom" aria-describedby="info-nom" />
+                        <input class="form-control mb-1" type="text" id="nom" name="nom" aria-describedby="info-nom" required />
                         <div class="alert alert-primary" id="info-nom">
                             <small>Veuillez indiquer votre Nom de famille d'usage, champ obligatoire</small>
                         </div>
@@ -566,6 +566,43 @@
                         <button class="btn btn-outline-secondary btn-sm" type="button">Bouton</button>
                     </div>
                 </form>
+                <div id="click-1" style="padding: 2rem; border: 1px solid black; max-width: 200px;">
+                    click-1
+                    <div id="click-2" style="padding: 2rem; border: 1px solid black; max-width: 100px;">
+                        click-2
+                    </div>
+                </div>
+                <script>
+                    const click1 = document.getElementById('click-1');
+                    const click2 = document.getElementById('click-2');
+                    click1.addEventListener('click', function(){
+                        console.log('click-1');
+                        
+                    });
+                    click2.addEventListener('click', function(event){
+                        event.stopPropagation();
+                        console.log('click-2');
+                    });
+                    /* la forme ()(); permet d'écrire une fonction anonyme (fonction de callback) qui s'auto exécute */
+                    (
+                        function(){
+                            'use strict';
+                            const forms = document.querySelectorAll('.needs-validation');
+                            /*console.log(forms);*/
+                            forms.forEach( function(form){
+                                console.log(form);
+                                form.addEventListener('submit', function(event){
+                                    console.log(event);
+                                    if(!form.checkValidity()){
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }
+                    )();
+                </script>
             </div>
         </section>
     </main>
