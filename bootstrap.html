@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <script src="./js/bootstrap.bundle.js"></script>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -47,7 +49,7 @@
                         Les <a href="#">liens</a> sont modifiés.
                     </p>
                     <p>
-                        Le séparateur horizontal est <code>&lt;hr /&gt;</code>  modifié
+                        Le séparateur horizontal est <code>&lt;hr /&gt;</code> modifié
                     </p>
                     <hr />
                     <p>
@@ -99,11 +101,13 @@
                     <figure>
                         <blockquote class="blockquote">
                             <p>
-                                <q>Marcher d'un même pas c'est l'objectif du despotisme et de la tyranie. Les hommes libres, eux, vont dans tous les sens</q>
+                                <q>Marcher d'un même pas c'est l'objectif du despotisme et de la tyranie. Les hommes
+                                    libres, eux, vont dans tous les sens</q>
                             </p>
                         </blockquote>
                         <figcaption class="blockquote-footer">
-                            Seigneur Vétérini dans le roman <cite title='"La vérité" par Terry Pratchett'>"La vérité" par Terry Pratchett</cite>
+                            Seigneur Vétérini dans le roman <cite title='"La vérité" par Terry Pratchett'>"La vérité"
+                                par Terry Pratchett</cite>
                         </figcaption>
                     </figure>
                 </article>
@@ -307,7 +311,8 @@
             <div class="col-lg-6">
                 <h2>Les tableaux</h2>
                 <p>
-                    Le reboot css de bootstrap corrige les problème d'affichage "moches" des tableaux (par rapport au css intégré des navigateurs)
+                    Le reboot css de bootstrap corrige les problème d'affichage "moches" des tableaux (par rapport au
+                    css intégré des navigateurs)
                 </p>
                 <table class="table caption-top">
                     <caption>Tableau bootstrap</caption>
@@ -349,7 +354,8 @@
                     </tfoot>
                 </table>
                 <p>
-                    Il est possible de changer les couleurs, l'apparence, et d'ajouter des bordures aux tableaux, en utilisant d'autres classes bootstrap.
+                    Il est possible de changer les couleurs, l'apparence, et d'ajouter des bordures aux tableaux, en
+                    utilisant d'autres classes bootstrap.
                 </p>
                 <p>
                     Au niveau des couleurs, on utilise encore les mots clef de couleur bootstrap :
@@ -372,18 +378,22 @@
                     <tr class="table-warning">
                         <th>La ligne est en warning</th>
                         <td>
-                            Comme la <code>tr</code> est en warning, la <code>th</code> et la <code>td</code> héritent du style css
+                            Comme la <code>tr</code> est en warning, la <code>th</code> et la <code>td</code> héritent
+                            du style css
                         </td>
                         <td class="table-primary">
-                            Comme cette <code>td</code> a la classe "table-primary", le style bleu des tableaux surcharge le style normalement hérité de la <code>tr</code>
+                            Comme cette <code>td</code> a la classe "table-primary", le style bleu des tableaux
+                            surcharge le style normalement hérité de la <code>tr</code>
                         </td>
                         <td>
-                            Cette <code>td</code> hérite du style parent, pas de la <code>td</code> précédente (élément frère / soeur ou "sibling")
+                            Cette <code>td</code> hérite du style parent, pas de la <code>td</code> précédente (élément
+                            frère / soeur ou "sibling")
                         </td>
                     </tr>
                 </table>
                 <p>
-                    Il est possible d'appliquer une couleur de fond un peu différente une ligne sur deux, avec la classe "table-striped"
+                    Il est possible d'appliquer une couleur de fond un peu différente une ligne sur deux, avec la classe
+                    "table-striped"
                 </p>
                 <table class="table table-dark table-striped caption-top">
                     <caption>
@@ -482,7 +492,8 @@
                     </tr>
                 </table>
                 <p>
-                    Parfois, seulement des bordures suffisent, meci à la classe "table-bordered". Les bordure auront la couleur déterminée par les classe de couleurs si elles sont utilisées
+                    Parfois, seulement des bordures suffisent, meci à la classe "table-bordered". Les bordure auront la
+                    couleur déterminée par les classe de couleurs si elles sont utilisées
                 </p>
                 <table class="table table-bordered">
                     <tr>
@@ -510,7 +521,8 @@
                 <form class="row needs-validation" novalidate>
                     <div class="col-sm-6 col-xxl-4 offset-xxl-2">
                         <label class="form-label" for="choixSelect">Sélecteur</label>
-                        <select class="form-select mb-1" id="choixSelect" name="choixSelect" aria-describedby="info-choixSelect">
+                        <select class="form-select mb-1" id="choixSelect" name="choixSelect"
+                            aria-describedby="info-choixSelect">
                             <option value="0">Aucun choix</option>
                             <option value="1">Choix 1</option>
                             <option value="2">Choix 2</option>
@@ -521,15 +533,21 @@
                     </div>
                     <div class="col-sm-6 col-xxl-4 ">
                         <label class="form-label" for="email">Email</label>
-                        <input class="form-control mb-1" type="email" name="email" id="email" aria-describedby="info-email" required />
-                        <div class="alert alert-primary" id="info-email"><small>Vous devez indiquer votre email, ce champ est obligatoire</small></div>
+                        <input class="form-control mb-1" type="email" name="email" id="email"
+                            aria-describedby="info-email" required />
+                        <div class="alert alert-primary" id="info-email"><small>Vous devez indiquer votre email, ce
+                                champ est obligatoire</small></div>
                     </div>
                     <div class="col-sm-6 col-xxl-4 offset-xxl-2">
-                        <label class="form-label" for="situation" aria-describedby="info-situation">Votre situation</label><br />
-                        <input class="form-check-input" type="radio" name="situation" id="pp" value="Physique" checked /> <label class="form-label" for="pp">Particulier</label><br />
-                        <input class="form-check-input" type="radio" name="situation" id="pm" value="Morale" /> <label class="form-label" for="pm">Entreprise</label>
+                        <label class="form-label" for="situation" aria-describedby="info-situation">Votre
+                            situation</label><br />
+                        <input class="form-check-input" type="radio" name="situation" id="pp" value="Physique"
+                            checked /> <label class="form-label" for="pp">Particulier</label><br />
+                        <input class="form-check-input" type="radio" name="situation" id="pm" value="Morale" /> <label
+                            class="form-label" for="pm">Entreprise</label>
                         <div id="info-situation" class="alert alert-primary mt-1">
-                            <small>Indiquez si vous remplissez ce formulaire en tant que particulier ou pour le compte d'une entreprise</small>
+                            <small>Indiquez si vous remplissez ce formulaire en tant que particulier ou pour le compte
+                                d'une entreprise</small>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xxl-4 ">
@@ -548,14 +566,16 @@
                     </div>
                     <div class="col-sm-6 col-xxl-4 offset-xxl-2">
                         <label class="form-label" for="prenom">Prénom</label>
-                        <input class="form-control mb-1" type="text" id="prenom" name="prenom" aria-describedby="info-prenom" />
+                        <input class="form-control mb-1" type="text" id="prenom" name="prenom"
+                            aria-describedby="info-prenom" />
                         <div class="alert alert-primary" id="info-prenom">
                             <small>Veuillez indiquer votre prénom, champ non obligatoire</small>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xxl-4 ">
                         <label class="form-label" for="nom">Nom</label>
-                        <input class="form-control mb-1" type="text" id="nom" name="nom" aria-describedby="info-nom" required />
+                        <input class="form-control mb-1" type="text" id="nom" name="nom" aria-describedby="info-nom"
+                            required />
                         <div class="alert alert-primary" id="info-nom">
                             <small>Veuillez indiquer votre Nom de famille d'usage, champ obligatoire</small>
                         </div>
@@ -575,25 +595,25 @@
                 <script>
                     const click1 = document.getElementById('click-1');
                     const click2 = document.getElementById('click-2');
-                    click1.addEventListener('click', function(){
+                    click1.addEventListener('click', function () {
                         console.log('click-1');
-                        
+
                     });
-                    click2.addEventListener('click', function(event){
+                    click2.addEventListener('click', function (event) {
                         event.stopPropagation();
                         console.log('click-2');
                     });
                     /* la forme ()(); permet d'écrire une fonction anonyme (fonction de callback) qui s'auto exécute */
                     (
-                        function(){
+                        function () {
                             'use strict';
                             const forms = document.querySelectorAll('.needs-validation');
                             /*console.log(forms);*/
-                            forms.forEach( function(form){
+                            forms.forEach(function (form) {
                                 console.log(form);
-                                form.addEventListener('submit', function(event){
+                                form.addEventListener('submit', function (event) {
                                     console.log(event);
-                                    if(!form.checkValidity()){
+                                    if (!form.checkValidity()) {
                                         event.preventDefault();
                                         event.stopPropagation();
                                     }
@@ -614,7 +634,8 @@
                     de sa largeur, mais elle ne s'affichera jamais plus grande que sa taille originale.
                 </p>
                 <figure>
-                    <img class="figure-img img-fluid rounded" src="./images/sce-hero-2400.jpg" alt="texte alternatif pour l'accessibilité" />
+                    <img class="figure-img img-fluid rounded" src="./images/sce-hero-2400.jpg"
+                        alt="texte alternatif pour l'accessibilité" />
                     <figcaption class="figure-caption">
                         Image promotionnelle du jeu "The outer worlds"
                     </figcaption>
@@ -629,7 +650,8 @@
                     <picture>
                         <source srcset="./images/james-white-composite-800w.png" media="(min-width: 820px)" />
                         <source srcset="./images/james-white-composite-400w.png" media="(min-width: 420px)" />
-                        <img class="figure-img img-fluid rounded" src="./images/james-white-composite-200w.png" alt="Composition des oeuvres de James White" />
+                        <img class="figure-img img-fluid rounded" src="./images/james-white-composite-200w.png"
+                            alt="Composition des oeuvres de James White" />
                     </picture>
                     <figcaption class="figure-caption">
                         Composition des oeuvres de James White
@@ -639,14 +661,136 @@
             <div class="col-lg-6">
                 <h2>Les media : vignettes</h2>
                 <p>
-                    on peux créer les images sous forme de vignette avec img-thumnail et faire "flotter" les images avec float-start sur la gauche et float-end sur la droite
+                    on peux créer les images sous forme de vignette avec img-thumnail et faire "flotter" les images avec
+                    float-start sur la gauche et float-end sur la droite
                 </p>
-                <img src="./images/batman-un-long-halloween-cover-art.jpg" style="max-width: 300px;" class="img-thumbnail float-end" />
+                <img src="./images/batman-un-long-halloween-cover-art.jpg" style="max-width: 300px;"
+                    class="img-thumbnail float-end" />
                 <span class="clearfix"></span>
                 <p>
                     On peut center l'image à l'aide des classes mx-auto et d-block
                 </p>
-                <img src="./images/DC-Comics-Batman-Caped-Crusader-official-cardboard-cutout-buy-now-at-starstills__04189.1582849820.jpg" style="max-width: 300px;" class="img-thumbnail mx-auto d-block" />
+                <img src="./images/DC-Comics-Batman-Caped-Crusader-official-cardboard-cutout-buy-now-at-starstills__04189.1582849820.jpg"
+                    style="max-width: 300px;" class="img-thumbnail mx-auto d-block" />
+            </div>
+            <div class="col-lg-6">
+                <h2>Les Media &lt;video&gt;</h2>
+                <p>
+                    Quand les vidéos sont hébergées sur le site, on utilise la balise <code>&lt;video&gt;</code>, cette
+                    balise peut utiliser la classe "img-fluid" pour la rendre directement responsive. Cette balise
+                    permet aussi de proposer à l'utilisateur plusieurs format de vidéo, comme ceci si son navigaeur
+                    n'accepte pas ou ne peux pas lire un format, il peux tenter de lire un autre format.
+                </p>
+                <video controls class="img-fluid">
+                    <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                    <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                </video>
+                <p>
+                    Si on crée un site illustré par beaucoup de vidéo, il est intéressant d'héberger ses vidéo sur un
+                    site spécalisé, comme youtube, et de profiter du partage via iframe qu'il propose.
+                </p>
+                <p>
+                    En revanche, le partage par défaut des vidéos sur youtbe n'est pas parfait, il propose une iframe
+                    avec une largeur et une hauteur fixe, non compatible avec la navigation mobile.
+                </p>
+                <p>
+                    Bootstrap propose des classes qui permettent de rendre les iframe responsive, on intègre l'iframe
+                    dans un conteneur qui aura deux classe, celle qui prépare le conteneur et sont contenu à afficher
+                    une iframe responsive et une classe qui indique le ratio de la vidéo (19/9, 21/9, 4/3, etc.)
+                </p>
+                <figure class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/E2dnCAurJcQ?si=vnNrcK2i7Q5ml89O"
+                        allowfullscreen></iframe>
+                </figure>
+            </div>
+            <div class="col-lg-6">
+                <h2>Les media &lt;audio&gt;</h2>
+                <p>
+                    La balise <code>&lt;audio&gt;</code> se comporte de la même façon que la balise
+                    <code>&lt;video&gt;</code>.
+                </p>
+                <figure>
+                    <audio controls>
+                        <source src="./media/audio/01 - Sure shot.mp3" />
+                    </audio>
+                </figure>
+                <p>
+                    La balise <code>&lt;audio&gt;</code> affiche le lecteur du navigateur, il n'y a pas de contrôle css
+                    possible pour changer son apparence, idem avec la balise <code>&lt;video&gt;</code>. pour avoir un
+                    lecteur customisé, il faut le construire soit-même avec html, CSS et gérer les controls à l'aide du
+                    javascript.
+                </p>
+                <p>
+                    Un exemple pris sur le site bootstrap example
+                </p>
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+                    rel="stylesheet">
+
+                <div class="container mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Now Playing</h5>
+                            <p class="card-text">Blizzard - Tristram theme</p>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span id="currentTime">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                            <div class="mt-3 text-center">
+                                <button id="prevBtn" class="btn btn-secondary"><i
+                                        class="fas fa-step-backward"></i></button>
+                                <button id="playPauseBtn" class="btn btn-primary"><i class="fas fa-play"></i></button>
+                                <button id="nextBtn" class="btn btn-secondary"><i
+                                        class="fas fa-step-forward"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // Add this inside the <script> tag at the bottom of the HTML
+                    const playPauseBtn = document.getElementById('playPauseBtn');
+                    const progressBar = document.querySelector('.progress-bar');
+                    const currentTimeSpan = document.getElementById('currentTime');
+                    const durationSpan = document.getElementById('duration');
+
+                    const audio = new Audio('./media/audio/diablo_town.mp3');
+                    console.log(audio);
+                    
+                    let isPlaying = false;
+
+                    function togglePlayPause() {
+                        if (isPlaying) {
+                            audio.pause();
+                            playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                        } else {
+                            audio.play();
+                            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                        }
+                        isPlaying = !isPlaying;
+                    }
+
+                    function updateProgress() {
+                        const progress = (audio.currentTime / audio.duration) * 100;
+                        progressBar.style.width = `${progress}%`;
+                        progressBar.setAttribute('aria-valuenow', progress);
+
+                        currentTimeSpan.textContent = formatTime(audio.currentTime);
+                        durationSpan.textContent = formatTime(audio.duration);
+                    }
+
+                    function formatTime(seconds) {
+                        const minutes = Math.floor(seconds / 60);
+                        const remainingSeconds = Math.floor(seconds % 60);
+                        return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+                    }
+
+                    playPauseBtn.addEventListener('click', togglePlayPause);
+                    audio.addEventListener('timeupdate', updateProgress);
+                </script>
             </div>
         </section>
     </main>
@@ -658,4 +802,5 @@
         </div>
     </footer>
 </body>
+
 </html>
