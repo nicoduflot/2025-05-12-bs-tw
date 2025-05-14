@@ -604,6 +604,50 @@
                     )();
                 </script>
             </div>
+            <div class="col-lg-4">
+                <h2>Les media &lt;img /&gt;</h2>
+                <p>
+                    Pour rendre les media adaptatifs, Bootstrap propose des classes adaptées.
+                </p>
+                <p>
+                    Pour les images, la classe "img-fluid" permet d'afficher l'image jusqu'à 100%
+                    de sa largeur, mais elle ne s'affichera jamais plus grande que sa taille originale.
+                </p>
+                <figure>
+                    <img class="figure-img img-fluid rounded" src="./images/sce-hero-2400.jpg" alt="texte alternatif pour l'accessibilité" />
+                    <figcaption class="figure-caption">
+                        Image promotionnelle du jeu "The outer worlds"
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-8">
+                <h2>Les media &lt;picture&gt;</h2>
+                <p>
+                    la classe img-fluid peut être aussi utilisée avec la balise <code>&lt;picture&gt;</code>
+                </p>
+                <figure>
+                    <picture>
+                        <source srcset="./images/james-white-composite-800w.png" media="(min-width: 820px)" />
+                        <source srcset="./images/james-white-composite-400w.png" media="(min-width: 420px)" />
+                        <img class="figure-img img-fluid rounded" src="./images/james-white-composite-200w.png" alt="Composition des oeuvres de James White" />
+                    </picture>
+                    <figcaption class="figure-caption">
+                        Composition des oeuvres de James White
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-6">
+                <h2>Les media : vignettes</h2>
+                <p>
+                    on peux créer les images sous forme de vignette avec img-thumnail et faire "flotter" les images avec float-start sur la gauche et float-end sur la droite
+                </p>
+                <img src="./images/batman-un-long-halloween-cover-art.jpg" style="max-width: 300px;" class="img-thumbnail float-end" />
+                <span class="clearfix"></span>
+                <p>
+                    On peut center l'image à l'aide des classes mx-auto et d-block
+                </p>
+                <img src="./images/DC-Comics-Batman-Caped-Crusader-official-cardboard-cutout-buy-now-at-starstills__04189.1582849820.jpg" style="max-width: 300px;" class="img-thumbnail mx-auto d-block" />
+            </div>
         </section>
     </main>
     <footer>
